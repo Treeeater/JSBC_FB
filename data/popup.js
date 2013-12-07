@@ -3,8 +3,9 @@
 // found in the LICENSE file.
 
 function navAndRecord_wrapper(e){
-	var site = window.prompt("Enter the site you want to test");
-	self.port.emit("panelActions", {action: "navAndRecord", site: site});
+	//var site = window.prompt("Enter the site you want to test");
+	//self.port.emit("panelActions", {action: "navAndRecord", site: site});
+	self.port.emit("panelActions", {action: "navAndRecord"});
 }
 
 document.getElementById('navAndRecord').addEventListener('click',navAndRecord_wrapper);
