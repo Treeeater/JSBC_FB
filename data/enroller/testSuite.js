@@ -3,6 +3,9 @@ function notifyOnload() {
 	if (!notified) {
 		self.port.emit("loadedURL",document.URL);
 		notified = true;
+		if (document.URL == "http://localhost/blank.html"){
+			self.port.emit("resetTabReady","");
+		}
 	}
 }
 
